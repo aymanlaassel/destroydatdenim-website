@@ -21,7 +21,7 @@ export const products: Product[] = [
     material: "14oz japanese selvedge denim",
     origin: "cut & sewn — casablanca",
     sizes: ["28", "30", "32", "34", "36"],
-    images: ["/assets/denim-raw.png", "/assets/logo-pair.png"],
+    images: ["/assets/logo-pair.png", "/assets/logo-tag.png"],
     note: "unwashed. will fade to the wearer.",
   },
   {
@@ -33,7 +33,7 @@ export const products: Product[] = [
     material: "13.5oz indigo denim, copper rivets",
     origin: "cut & sewn — casablanca",
     sizes: ["s", "m", "l", "xl"],
-    images: ["/assets/denim-raw.png"],
+    images: ["/assets/denim-raw.png", "/assets/logo-tag.png"],
   },
   {
     slug: "lot-03-overshirt",
@@ -44,7 +44,7 @@ export const products: Product[] = [
     material: "10oz brushed denim",
     origin: "cut & sewn — casablanca",
     sizes: ["s", "m", "l", "xl"],
-    images: ["/assets/denim-raw.png"],
+    images: ["/assets/logo-design.png", "/assets/logo-tag.png"],
   },
 ];
 
