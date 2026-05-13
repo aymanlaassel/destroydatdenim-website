@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="w3" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="3.2" height="3.2" fill="#0c1626"/>
+      <line x1="0" y1="0" x2="0" y2="3.2" stroke="#1a2c4d" stroke-width="0.55"/>
+    </pattern>
+    <linearGradient id="v3" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1c2c4a"/>
+      <stop offset="100%" stop-color="#060c1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#v3)"/>
+  <rect width="800" height="1000" fill="url(#w3)" opacity="0.55"/>
+</svg>
