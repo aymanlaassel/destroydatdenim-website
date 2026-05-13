@@ -6,14 +6,13 @@ export const metadata = { title: "info — ddd" };
 export default function Info() {
   return (
     <>
-      <div className="denim-plate" aria-hidden />
       <Nav />
-      <main className="pt-[58px]">
-        <div className="px-4 md:px-6 pt-10 pb-10">
-          <div className="max-w-2xl space-y-12 bg-p1/55 backdrop-blur-[2px] p-6 md:p-9 border border-bone/12">
+      <main>
+        <div className="px-5 md:px-8 pt-10 pb-10">
+          <div className="max-w-2xl space-y-12">
             <div>
-              <div className="text-[10px] uppercase tracking-[0.32em] text-bone/55 mb-4">info</div>
-              <p className="text-[18px] md:text-[22px] leading-[1.4] tracking-[0.01em] text-bone uppercase">
+              <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-4">info</div>
+              <p className="text-[18px] md:text-[22px] leading-[1.4] tracking-[0.02em] text-ink uppercase">
                 an independent denim house.
                 <br />
                 casablanca · tokyo · madrid · new york.
@@ -22,31 +21,31 @@ export default function Info() {
 
             <div className="grid grid-cols-2 gap-x-8 gap-y-6 text-[11px] tracking-wide">
               <div>
-                <div className="text-[10px] uppercase tracking-[0.32em] text-bone/40 mb-2">contact</div>
-                <a href="mailto:contact@destroydatdenim.com" className="text-bone/85 hover:text-bone">contact@destroydatdenim.com</a>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">contact</div>
+                <a href="mailto:contact@destroydatdenim.com" className="text-ink hover:opacity-60">contact@destroydatdenim.com</a>
               </div>
               <div>
-                <div className="text-[10px] uppercase tracking-[0.32em] text-bone/40 mb-2">instagram</div>
-                <a href="https://instagram.com/destroydatdenim" className="text-bone/85 hover:text-bone">@destroydatdenim</a>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">instagram</div>
+                <a href="https://instagram.com/destroydatdenim" className="text-ink hover:opacity-60">@destroydatdenim</a>
               </div>
               <div>
-                <div className="text-[10px] uppercase tracking-[0.32em] text-bone/40 mb-2">press</div>
-                <a href="mailto:press@destroydatdenim.com" className="text-bone/85 hover:text-bone">press@destroydatdenim.com</a>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">press</div>
+                <a href="mailto:press@destroydatdenim.com" className="text-ink hover:opacity-60">press@destroydatdenim.com</a>
               </div>
               <div>
-                <div className="text-[10px] uppercase tracking-[0.32em] text-bone/40 mb-2">stockists</div>
-                <span className="text-bone/85">by request.</span>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">stockists</div>
+                <span className="text-ink">by request.</span>
               </div>
             </div>
 
-            <div className="pt-6 border-t border-bone/10">
-              <div className="text-[10px] uppercase tracking-[0.32em] text-bone/40 mb-4">palette</div>
+            <div className="pt-6 border-t border-hair">
+              <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-4">palette</div>
               <Image
                 src="/assets/palette.png"
                 alt="palette"
                 width={2454}
                 height={904}
-                className="w-full h-auto"
+                className="w-full h-auto bg-ink"
               />
             </div>
           </div>

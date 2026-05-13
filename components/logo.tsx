@@ -1,20 +1,15 @@
 import Link from "next/link";
 
-type LogoProps = {
-  size?: "sm" | "md" | "lg";
-  tone?: "bone" | "white";
-};
+type LogoProps = { size?: "xs" | "sm" | "md" };
 
 const sizeMap = {
-  sm: "w-[88px] md:w-[108px]",
-  md: "w-[160px] md:w-[200px]",
-  lg: "w-[260px] md:w-[360px]",
+  xs: "w-[28px] md:w-[32px]",
+  sm: "w-[44px] md:w-[52px]",
+  md: "w-[88px] md:w-[108px]",
 } as const;
 
-// Use the logo PNG as a luminance mask — bright graffiti stays, dark denim drops to transparent.
-// We then fill the cutout with bone/white so the mark is painted in pigment onto the denim plate.
-export function Logo({ size = "sm", tone = "bone" }: LogoProps) {
-  const color = tone === "white" ? "#ece9df" : "var(--color-bone)";
+// luminance-mask the ddd graffiti and fill it ink-black so it lives on the white page.
+export function Logo({ size = "xs" }: LogoProps) {
   return (
     <Link href="/" aria-label="destroy dat denim — home" className="inline-block">
       <span
@@ -22,7 +17,7 @@ export function Logo({ size = "sm", tone = "bone" }: LogoProps) {
         className={`${sizeMap[size]} block`}
         style={{
           aspectRatio: "994 / 1240",
-          backgroundColor: color,
+          backgroundColor: "var(--color-topbar-ink)",
           WebkitMaskImage: "url(/assets/denim-raw.png)",
           maskImage: "url(/assets/denim-raw.png)",
           WebkitMaskSize: "contain",
@@ -32,8 +27,6 @@ export function Logo({ size = "sm", tone = "bone" }: LogoProps) {
           WebkitMaskPosition: "center",
           maskPosition: "center",
           maskMode: "luminance",
-          WebkitMaskComposite: "source-over",
-          // Safari fallback for luminance masking
           ...({ WebkitMaskSourceType: "luminance" } as React.CSSProperties),
         }}
       />
