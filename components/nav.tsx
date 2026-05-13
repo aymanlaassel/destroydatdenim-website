@@ -12,7 +12,7 @@ const navItems: { label: string; href: string }[] = [
 
 export function Nav() {
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-bone/15 bg-p1/55 backdrop-blur-[2px]">
+    <header className="fixed inset-x-0 top-0 z-40">
       <div className="flex items-center justify-between px-4 md:px-6 h-[58px]">
         {/* logo — small */}
         <div className="w-[80px] md:w-[96px]">

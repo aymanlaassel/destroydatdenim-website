@@ -18,7 +18,7 @@ export function Logo({ size = "sm" }: LogoProps) {
         width={480}
         height={600}
         priority
-        className={`${sizeMap[size]} h-auto select-none`}
+        className={`${sizeMap[size]} h-auto select-none mix-blend-screen`}
       />
     </Link>
   );
