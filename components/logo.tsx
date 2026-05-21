@@ -1,25 +1,24 @@
 import Image from "next/image";
-import Link from "next/link";
 
-type LogoProps = { size?: "xs" | "sm" | "md" };
+type LogoProps = { size?: "xs" | "sm" | "md" | "xl"; className?: string };
 
 const sizeMap = {
-  xs: "w-[36px] md:w-[42px]",
+  xs: "w-[30px] md:w-[34px]",
   sm: "w-[56px] md:w-[64px]",
-  md: "w-[96px] md:w-[112px]",
+  md: "w-[110px] md:w-[130px]",
+  xl: "w-[180px] md:w-[260px]",
 } as const;
 
-export function Logo({ size = "xs" }: LogoProps) {
+// Pure mark — no link of its own, so callers can wrap it freely.
+export function Logo({ size = "xs", className = "" }: LogoProps) {
   return (
-    <Link href="/" aria-label="destroy dat denim — home" className="inline-block">
-      <Image
-        src="/assets/logo.png"
-        alt="destroy dat denim"
-        width={953}
-        height={1191}
-        priority
-        className={`${sizeMap[size]} h-auto select-none`}
-      />
-    </Link>
+    <Image
+      src="/assets/logo.png"
+      alt="destroy dat denim"
+      width={953}
+      height={1191}
+      priority
+      className={`${sizeMap[size]} ${className} h-auto select-none`}
+    />
   );
 }

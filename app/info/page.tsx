@@ -1,55 +1,34 @@
-import Image from "next/image";
 import { Nav, Footer } from "@/components/nav";
+import { Logo } from "@/components/logo";
 
-export const metadata = { title: "info — ddd" };
+export const metadata = { title: "info — destroy dat denim" };
 
 export default function Info() {
   return (
     <>
       <Nav />
       <main>
-        <div className="px-5 md:px-8 pt-10 pb-10">
-          <div className="max-w-2xl space-y-12">
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-4">info</div>
-              <p className="text-[18px] md:text-[22px] leading-[1.4] tracking-[0.02em] text-ink uppercase">
-                an independent denim house.
-                <br />
-                casablanca · tokyo · madrid · new york.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-x-8 gap-y-6 text-[11px] tracking-wide">
-              <div>
-                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">contact</div>
-                <a href="mailto:contact@destroydatdenim.com" className="text-ink hover:opacity-60">contact@destroydatdenim.com</a>
-              </div>
-              <div>
-                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">instagram</div>
-                <a href="https://instagram.com/destroydatdenim" className="text-ink hover:opacity-60">@destroydatdenim</a>
-              </div>
-              <div>
-                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">press</div>
-                <a href="mailto:press@destroydatdenim.com" className="text-ink hover:opacity-60">press@destroydatdenim.com</a>
-              </div>
-              <div>
-                <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-2">stockists</div>
-                <span className="text-ink">by request.</span>
-              </div>
-            </div>
-
-            <div className="pt-6 border-t border-hair">
-              <div className="text-[10px] uppercase tracking-[0.22em] text-muted mb-4">palette</div>
-              <Image
-                src="/assets/palette.png"
-                alt="palette"
-                width={2454}
-                height={904}
-                className="w-full h-auto bg-ink"
-              />
-            </div>
+        <section className="px-6 md:px-12 pt-20 md:pt-28 pb-28">
+          <Logo size="md" />
+          <h1 className="mt-14 md:mt-20 text-[clamp(2.25rem,6.4vw,5.25rem)] font-bold uppercase leading-[0.95] tracking-[-0.04em]">
+            moroccan blood
+            <br />
+            japanese discipline
+            <br />
+            madrid streets
+          </h1>
+          <div className="mt-16 flex flex-col gap-2">
+            <span className="text-[11px] uppercase tracking-[0.18em] text-muted">
+              independent denim — casablanca
+            </span>
+            <a
+              href="mailto:contact@destroydatdenim.com"
+              className="text-[13px] text-muted hover:text-fg transition-colors w-fit"
+            >
+              contact@destroydatdenim.com
+            </a>
           </div>
-        </div>
+        </section>
         <Footer />
       </main>
     </>
